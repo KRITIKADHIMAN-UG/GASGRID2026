@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+backend/gasgrid.db
+*.log
+.DS_Store

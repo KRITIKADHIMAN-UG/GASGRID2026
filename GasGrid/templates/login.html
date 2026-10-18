@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GasGrid | Login</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="login-body">
+<main class="login-shell">
+  <section class="login-brand">
+    <div class="brand-mark">G</div><p class="eyebrow">SMART LPG MANAGEMENT</p>
+    <h1>GasGrid</h1><p>Refills, delivery tracking and customer support in one place.</p>
+    <div class="login-points"><span>✓ Refill booking</span><span>✓ Order tracking</span><span>✓ Complaints and support</span></div>
+  </section>
+  <section class="login-panel">
+    <h2>Welcome back</h2><p class="muted">Sign in to your GasGrid account.</p>
+    <div class="tabs"><button class="tab active" data-role="user">Customer</button><button class="tab" data-role="admin">Admin</button></div>
+    <form id="login-form">
+      <label>Mobile number<input name="phone" inputmode="numeric" maxlength="10" pattern="[6-9][0-9]{9}" required placeholder="10-digit mobile number"></label>
+      <label>Password<input name="password" type="password" required minlength="8" placeholder="Enter password"></label>
+      <button class="primary full" type="submit">Sign in</button><p id="login-feedback" class="feedback"></p>
+      <button id="show-recovery" class="link-button" type="button">Forgot password?</button>
+    </form>
+    <section id="recovery-panel" class="recovery-panel" hidden>
+      <hr>
+      <h3>Recover your password</h3>
+      <p class="muted small-note">Choose the Customer or Admin tab above, then enter the account phone number. This offline academic demo displays a temporary code here instead of sending SMS.</p>
+      <form id="recovery-request-form">
+        <label>Account mobile number<input name="phone" required inputmode="numeric" maxlength="10" pattern="[6-9][0-9]{9}" placeholder="10-digit mobile number"></label>
+        <button class="secondary full" type="submit">Generate recovery code</button>
+        <p id="recovery-request-feedback" class="feedback"></p>
+      </form>
+      <div id="demo-code-box" class="demo-code" hidden></div>
+      <form id="recovery-reset-form">
+        <label>6-digit recovery code<input name="code" required inputmode="numeric" maxlength="6" pattern="[0-9]{6}" placeholder="Enter code"></label>
+        <label>New password<input name="new_password" type="password" required minlength="8" maxlength="40" placeholder="At least 8 characters, letters and numbers"></label>
+        <button class="primary full" type="submit">Reset password</button>
+        <p id="recovery-reset-feedback" class="feedback"></p>
+      </form>
+    </section>
+    <details><summary>Demo login credentials</summary><p><b>Customer:</b> 9000000000 / User@123</p><p><b>Admin:</b> 9999999999 / Admin@123</p></details>
+    <hr>
+    <h3>Create customer account</h3>
+    <form id="register-form">
+      <label>Full name<input name="name" required minlength="2" maxlength="60" pattern="[A-Za-z][A-Za-z .'-]{1,59}" placeholder="Your name"></label>
+      <label>Mobile number<input name="phone" required inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile number"></label>
+      <label>Delivery address<input name="address" required minlength="5" maxlength="160" pattern="[A-Za-z0-9 .,'/#()\-]{5,160}" placeholder="Locality, city, state"></label>
+      <label>Password<input name="password" type="password" required minlength="8" maxlength="40" placeholder="At least 8 characters, letters and numbers"></label>
+      <button class="secondary full" type="submit">Create account</button><p id="register-feedback" class="feedback"></p>
+    </form>
+  </section>
+</main>
+<script src="/static/login.js"></script>
+</body></html>
