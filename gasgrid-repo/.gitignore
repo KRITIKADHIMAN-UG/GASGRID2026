@@ -1,0 +1,8 @@
+backend/target/
+os/bin/*
+!os/bin/.gitkeep
+.env
+*.class
+*.log
+.idea/
+.vscode/
